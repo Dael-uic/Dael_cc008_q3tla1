@@ -1,0 +1,335 @@
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+.header {
+    max-width: 700px;
+    margin: 32px auto 24px auto;
+    background: #6366f1;
+    color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(99,102,241,0.10);
+    padding: 32px 40px 24px 40px;
+    text-align: center;
+}
+
+.header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.header p {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+    font-weight: 400;
+}
+
+.header hr {
+    border: none;
+    border-top: 2px solid #a5b4fc;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto 24px auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px 40px 24px 40px;
+}
+
+form {
+    margin-bottom: 0;
+}
+
+h4 {
+    margin-bottom: 10px;
+    color: #374151;
+    font-weight: 700;      /* Make bold */
+    font-size: 1.35rem;    /* Make a bit larger */
+    letter-spacing: 0.5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #374151;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background: #f1f5f9;
+    font-size: 1rem;
+    transition: border 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus {
+    border-color: #6366f1;
+    outline: none;
+    background: #fff;
+}
+
+input[type="file"] {
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+    accent-color: #6366f1;
+}
+
+.personal-image,
+.date-container,
+.birth-location,
+.sex-container,
+.civil-status,
+.nationality,
+.religion,
+.contact-number,
+.email,
+.home-address,
+.emergency-contact,
+.username,
+.password,
+.submit-button {
+    max-width: 700px;
+    margin: 0 auto 24px auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 24px 40px 16px 40px;
+}
+
+.name-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.name-container form label,
+.name-container form input {
+    margin-bottom: 8px;
+}
+
+.sex-container,
+.civil-status {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.sex-container form,
+.civil-status form {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+}
+
+.sex-container label,
+.civil-status label {
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+.nationality,
+.religion,
+.contact-number,
+.email,
+.home-address,
+.username,
+.password {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.emergency-contact {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.submit-button {
+    text-align: center;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+}
+
+input[type="submit"] {
+    background: linear-gradient(90deg, #6366f1 0%, #818cf8 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(99,102,241,0.08);
+    transition: background 0.2s, transform 0.1s;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(90deg, #4f46e5 0%, #6366f1 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+
+@media (max-width: 800px) {
+    .container,
+    .personal-image,
+    .date-container,
+    .birth-location,
+    .sex-container,
+    .civil-status,
+    .nationality,
+    .religion,
+    .contact-number,
+    .email,
+    .home-address,
+    .emergency-contact,
+    .username,
+    .password {
+        padding: 20px 16px 12px 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px 0;
+    }
+    .container,
+    .personal-image,
+    .date-container,
+    .birth-location,
+    .sex-container,
+    .civil-status,
+    .nationality,
+    .religion,
+    .contact-number,
+    .email,
+    .home-address,
+    .emergency-contact,
+    .username,
+    .password {
+        border-radius: 8px;
+        padding: 12px 6px 8px 6px;
+        margin-bottom: 14px;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 12px 0;
+    }
+    .sex-container form,
+    .civil-status form {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(30, 41, 59, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.modal-overlay.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 32px 28px 24px 28px;
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(30,41,59,0.18);
+    text-align: center;
+    min-width: 320px;
+    max-width: 90vw;
+    animation: fadeInModal 0.3s;
+}
+
+@keyframes fadeInModal {
+    from { transform: translateY(40px) scale(0.97); opacity: 0; }
+    to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.modal-content h3 {
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+    color: #374151;
+    font-weight: 700;
+}
+
+.modal-content p {
+    margin-bottom: 24px;
+    color: #475569;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.modal-actions button {
+    padding: 10px 28px;
+    border: none;
+    border-radius: 7px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.18s;
+}
+
+#confirmYes {
+    background: linear-gradient(90deg, #6366f1 0%, #818cf8 100%);
+    color: #fff;
+}
+
+#confirmYes:hover {
+    background: linear-gradient(90deg, #4f46e5 0%, #6366f1 100%);
+}
+
+#confirmNo {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+#confirmNo:hover {
+    background: #cbd5e1;
+}

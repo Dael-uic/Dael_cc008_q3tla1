@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h2>Personal Information Form</h2>
+        <p>Please fill in this form to create an account.</p>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="name-container">
+            <form method="POST">
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="mname">Middle name:</label><br>
+                <input type="text" id="mname" name="fname"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname">
+            </form>
+        </div>
+    </div>
+    <div class="personal-image">
+        <form method="POST" enctype="multipart/form-data">
+            <label for="imageUpload">Upload your image:</label><br>
+            <input type="file" id="imageUpload" name="imageUpload" accept="image/*">
+        </form>
+
+    </div>
+    <div class="date-container">
+        <form method="POST">
+            <label for="bday">Birthday:</label><br>
+            <input type="date" id="bday" name="bday">
+        </form>
+    </div>
+    <div class="birth-location">
+        <form method="POST">
+            <label for="birthplace">Place of Birth:</label><br>
+            <input type="text" id="birthplace" name="birthplace" maxlength="64">
+        </form>
+    </div>
+    <div class="sex-container">
+        <h4>Sex</h4>
+        <form method="POST">
+            <input type="radio" id="male" name="sex" value="M">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="sex" value="F">
+            <label for="female">Female</label><br>
+        </form>
+    </div>
+    <div class="civil-status">
+        <h4>Civil Status</h4>
+        <label for="civilstatus">Civil Status:</label><br>
+        <select id="civilstatus" name="civilstatus">
+            <option value="">-- Select Civil Status --</option>
+            <option value="Single">Single</option>
+            <option value="Married">Married</option>
+            <option value="Divorced">Divorced</option>
+        </select>
+    </div>
+    <div class="nationality">
+        <label for="nationality">Nationality:</label><br>
+        <input type="text" id="nationality" name="nationality" maxlength="64">
+    </div>
+    <div class="religion">
+        <label for="religion">Religion:</label><br>
+        <input type="text" id="religion" name="religion" maxlength="64">
+    </div>
+    <div class="contact-number">
+        <label for="contactnumber">Contact Number:</label><br>
+        <input type="number" id="contactnumber" name="contactnumber" maxlength="20">
+    </div>
+    <div class="email">
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email">
+    </div>
+    <div class="home-address">
+        <label for="homeaddress">Home Address:</label><br>
+        <input type="text" id="homeaddress" name="homeaddress">
+    </div>
+    <div class="emergency-contact">
+        <h4>Emergency Contact</h4>
+        <label for="e-name">Name:</label><br>
+        <input type="text" id="e-name" name="e-name" maxlength="64"><br>
+        <label for="e-relation">Relation:</label><br>
+        <input type="text" id="e-relation" name="e-relation" maxlength="64"><br>
+        <label for="e-contactnumber">Contact Number:</label><br>
+        <input type="number" id="e-contactnumber" name="e-contactnumber" maxlength="20"><br>
+    </div>
+    <div class="password">
+        <h4>User Info</h4>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" maxlength="32">
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" maxlength="64">
+        <label for="confirm-password">Confirm Password:</label><br>
+        <input type="password" id="confirm-password" name="confirm-password" maxlength="64">
+    </div>
+    <div class="submit-button">
+    <input type="submit" value="Submit" id="submitBtn">
+    </div>
+
+<!-- Confirmation Modal -->
+<div id="confirmModal" class="modal-overlay">
+    <div class="modal-content">
+        <h3>Confirm Submission</h3>
+        <p>Are you sure you want to submit the form?</p>
+        <div class="modal-actions">
+            <button id="confirmYes">Yes, Submit</button>
+            <button id="confirmNo">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<div id="warningModal" class="modal-overlay">
+    <div class="modal-content" style="max-width:350px;">
+        <h3>Incomplete Form</h3>
+        <p>All fields must be filled out before submitting.</p>
+        <div class="modal-actions">
+            <button id="warningOk">OK</button>
+        </div>
+    </div>
+</div>
+
+<script src="form.js"></script>
+</body>
+</html>
